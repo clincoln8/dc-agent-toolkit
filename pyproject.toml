@@ -60,3 +60,8 @@ extend-ignore = [
   "COM812", # missing-trailing-comma may conflict with formatter
   "E501",   # line-too-long
 ]
+
+[tool.uv.workspace]
+members = [
+    "packages/datacommons-mcp",
+]
