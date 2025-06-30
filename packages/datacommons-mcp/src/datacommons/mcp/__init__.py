@@ -2,5 +2,5 @@ from .server import mcp
 
 
 def main() -> None:
-  print(mcp)
-  mcp.run()
+    print(mcp)
+    mcp.run()
