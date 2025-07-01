@@ -8,6 +8,10 @@ requires-python = ">=3.11"
 dependencies = [
     "datacommons-client>=2.1.1",
     "mcp[cli]>=1.10.1",
+    "pydantic>=2.11.7",
+    "pytest>=8.4.1",
+    "pytest-asyncio>=1.0.0",
+    "requests>=2.32.4",
 ]
 
 [project.scripts]
