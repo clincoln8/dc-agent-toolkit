@@ -74,3 +74,13 @@ multi_dc_client = create_clients(config.CUSTOM_DC_CONFIG)
 # Federation of multiple DC clients
 multi_dc_client = create_clients(config.FEDERATED_DC_CONFIG)
 ```
+
+
+## Dev Notes
+
+### File Checks + Formatting
+```bash
+uv run ruff check # to check files
+
+uv run ruff format # to format files
+```
