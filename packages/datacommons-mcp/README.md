@@ -4,55 +4,38 @@ A MCP server for fetching statistical data from Data Commons instances.
 
 ## Usage
 
-### Installation
 
-1. Create a virtual environment:
+### Start MCP Server
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
+Option 1: Use the datacommons-mcp cli
+```
+export DC_API_KEY={YOUR_API_KEY}
+uv run datacommons-mcp serve (http|stdio)
 ```
 
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
+Option 2: Use the mcp cli
+To start the MCP server, run:
+```
+export DC_API_KEY={YOUR_API_KEY}
+cd packages/datacommons-mcp # navigate to package dir
+uv run mcp run datacommons_mcp/server.py:mcp --t (sse|stdio)
 ```
 
-3. Set environment variables:
 
-Copy the `.env.sample` file to `.env` and fill in your values.
+### Test with MCP Inspector
+To run with MCP Inspector, **from this dir** run:
+
+```
+export DC_API_KEY={YOUR_API_KEY}
+uv run mcp dev datacommons_mcp/server.py
 ```
 
-### Running the Server
+Make sure to use the MCP Inspector URL with the prefilled session token!
 
-Start the server:
-
-```bash
-python server.py
-```
-
-The server will run on `http://localhost:8080` by default.
-
-### Using MCP Inspector
-
-[MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector) is a tool for inspecting and debugging MCP servers.
-
-There are many ways to install and run the inspector. The easiest is to run directly using `npx`:
-
-```bash
-npx @modelcontextprotocol/inspector
-```
-
-This will start the inspector on `http://localhost:6274` by default. 
-
-> IMPORTANT: Open the inspector via the **pre-filled session token url** which is printed to terminal on server startup.
-* It should look like `http://localhost:6274/?MCP_PROXY_AUTH_TOKEN={session_token}`
-
-Then to connect to this MCP server, enter the following values in the inspector UI:
-
-- Transport Type: `SSE`
-- URL: `http://localhost:8080/sse`
+The connection arguments should be prefilled with 
+* `Transport Type` = "STDIO"
+* `Command` = "uv"
+* `Arguments` = "run --with mcp mcp run datacommons_mcp/server.py"
 
 ### Configuration
 

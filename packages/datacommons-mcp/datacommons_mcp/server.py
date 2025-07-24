@@ -19,7 +19,7 @@ import asyncio
 import types
 from typing import Union, get_args, get_origin
 
-from fastmcp import FastMCP
+from mcp.server.fastmcp import FastMCP
 from pydantic import ValidationError
 
 import datacommons_mcp.config as config
@@ -616,4 +616,3 @@ async def get_datacommons_chart_config(
     except ValidationError as e:
         # Catch Pydantic errors and make them more user-friendly
         raise ValueError(f"Validation failed for chart_type '{chart_type}': {e}") from e
-

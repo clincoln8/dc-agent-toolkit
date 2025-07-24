@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi",
     "uvicorn",
-    "fastmcp",
+    "mcp[cli]>=1.10.1",
     "requests",
     "datacommons-client",
 ]
