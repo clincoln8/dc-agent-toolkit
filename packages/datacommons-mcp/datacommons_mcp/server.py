@@ -19,7 +19,7 @@ import asyncio
 import types
 from typing import Union, get_args, get_origin
 
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from pydantic import ValidationError
 
 import datacommons_mcp.config as config
