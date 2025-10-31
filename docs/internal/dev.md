@@ -3,7 +3,7 @@
 A MCP server for fetching statistical data from Data Commons instances.
 
 ## Development
-
+change to md
 
 ### Start MCP locally
 
