@@ -24,7 +24,6 @@ from .data_models.settings import (
 
 
 # change
-# change
 def get_dc_settings() -> DCSettings:
     """
     Get Data Commons settings from environment variables.
